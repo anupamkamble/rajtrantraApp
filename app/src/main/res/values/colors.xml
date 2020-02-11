@@ -7,4 +7,8 @@
     <color name="themeColorViolet">#7881F8</color>
     <color name="themeColorGrey">#F5F5F5</color>
     <color name="themeColorWhite">#ffffff</color>
+    <color name="headerColor">#6E78F7</color>
+    <color name="grayColor">#898A8F</color>
+    <color name="lineColor">#ECECEC</color>
+    <color name="background">#F5F5F5</color>
 </resources>
