@@ -1,0 +1,31 @@
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/subBody"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:background="@mipmap/main_layout_back_ground"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/menuBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_menu_white_24dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="30dp"
+        android:paddingRight="20dp"
+
+        ></ImageView>
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ranjtrantra 3.0"
+        android:textColor="@color/themeColorWhite"
+        android:textSize="25dp"
+        app:layout_constraintLeft_toRightOf="@+id/menuBtn"
+        android:paddingTop="25dp"
+        ></TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
