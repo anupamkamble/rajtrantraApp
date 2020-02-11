@@ -1,0 +1,171 @@
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/themeColorViolet"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/subBody"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent=".5"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@mipmap/main_layout_back_ground"
+            >
+
+            <ImageView
+                android:id="@+id/menuBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_menu_white_24dp"
+
+                android:paddingLeft="15dp"
+                android:paddingTop="30dp"
+                android:paddingRight="20dp"
+
+                ></ImageView>
+
+            <TextView
+                android:id="@+id/appName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ranjtrantra 3.0"
+                android:textColor="@color/themeColorWhite"
+                android:textSize="25dp"
+                app:layout_constraintLeft_toRightOf="@+id/menuBtn"
+                android:paddingTop="25dp"
+                ></TextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            ></EditText>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/imageContainer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent=".5"
+            app:layout_constraintTop_toBottomOf="@+id/subBody"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:background="@color/themeColorGrey"
+            >
+
+            <ImageView
+                android:id="@+id/voterList"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:src="@mipmap/ic_launcher"
+                android:padding="20dp"
+                app:layout_constraintHorizontal_weight="1"
+                >
+            </ImageView>
+
+            <TextView
+                android:id="@+id/voterTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Voters List"
+                android:paddingLeft="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/voterList"
+                ></TextView>
+
+            <ImageView
+                android:id="@+id/voterSurvey"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@+id/voterList"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintRight_toLeftOf="@+id/boothPlans"
+                android:padding="20dp"
+
+                >
+            </ImageView>
+            <TextView
+                android:id="@+id/surveyTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Voters Survey"
+                app:layout_constraintTop_toBottomOf="@+id/voterSurvey"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                ></TextView>
+
+
+            <ImageView
+                android:id="@+id/boothPlans"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="20dp"
+                app:layout_constraintLeft_toRightOf="@+id/voterSurvey">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/boothTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Booth Plans"
+                app:layout_constraintTop_toBottomOf="@+id/boothPlans"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:paddingRight="20dp"
+                ></TextView>
+
+
+            <ImageView
+                android:id="@+id/sync"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/voterList"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:paddingTop="50dp"
+                android:paddingBottom="20dp"
+
+                >
+            </ImageView>
+            <TextView
+                android:id="@+id/syncTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sync"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sync"
+                ></TextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ListView
+        android:id="@+id/left_drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#FFFFFF"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp">
+    </ListView>
+
+</androidx.drawerlayout.widget.DrawerLayout>
