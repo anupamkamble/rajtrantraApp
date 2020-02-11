@@ -12,58 +12,26 @@
         android:background="@color/themeColorViolet"
         >
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <include
             android:id="@+id/subBody"
+            layout="@layout/first_screen_sub_layout"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintHeight_percent=".5"
-            app:layout_constraintTop_toTopOf="parent"
-            android:background="@mipmap/main_layout_back_ground"
-            >
+            ></include>
 
-            <ImageView
-                android:id="@+id/menuBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_menu_white_24dp"
 
-                android:paddingLeft="15dp"
-                android:paddingTop="30dp"
-                android:paddingRight="20dp"
-
-                ></ImageView>
-
-            <TextView
-                android:id="@+id/appName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Ranjtrantra 3.0"
-                android:textColor="@color/themeColorWhite"
-                android:textSize="25dp"
-                app:layout_constraintLeft_toRightOf="@+id/menuBtn"
-                android:paddingTop="25dp"
-                ></TextView>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <EditText
-            android:id="@+id/search"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            ></EditText>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/imageContainer"
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintHeight_percent=".5"
-            app:layout_constraintTop_toBottomOf="@+id/subBody"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             android:background="@color/themeColorGrey"
+            android:paddingTop="30dp"
             >
 
             <ImageView
@@ -71,7 +39,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
-                android:src="@mipmap/ic_launcher"
+                android:src="@mipmap/list"
                 android:padding="20dp"
                 app:layout_constraintHorizontal_weight="1"
                 >
@@ -82,7 +50,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Voters List"
-                android:paddingLeft="20dp"
+                android:paddingLeft="10dp"
+                android:textStyle="bold"
+                android:textSize="18dp"
                 app:layout_constraintTop_toBottomOf="@+id/voterList"
                 ></TextView>
 
@@ -91,7 +61,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintLeft_toRightOf="@+id/voterList"
-                android:src="@mipmap/ic_launcher"
+                android:src="@mipmap/survey"
                 app:layout_constraintRight_toLeftOf="@+id/boothPlans"
                 android:padding="20dp"
 
@@ -105,6 +75,8 @@
                 app:layout_constraintTop_toBottomOf="@+id/voterSurvey"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
+                android:textSize="18dp"
+                android:textStyle="bold"
                 ></TextView>
 
 
@@ -112,7 +84,7 @@
                 android:id="@+id/boothPlans"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/ic_launcher"
+                android:src="@mipmap/booth_plan"
                 app:layout_constraintHorizontal_weight="1"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:padding="20dp"
@@ -126,7 +98,9 @@
                 android:text="Booth Plans"
                 app:layout_constraintTop_toBottomOf="@+id/boothPlans"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:paddingRight="20dp"
+                android:paddingRight="5dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
                 ></TextView>
 
 
@@ -135,7 +109,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@+id/voterList"
-                android:src="@mipmap/ic_launcher"
+                android:src="@mipmap/sync"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 android:paddingTop="50dp"
@@ -151,10 +125,30 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/sync"
+                android:textSize="18dp"
+                android:textStyle="bold"
                 ></TextView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:hint="Search by name, surname, card no"
+            android:background="@drawable/white_curve"
+            android:drawableLeft="@drawable/zoom_in"
+            android:drawablePadding="10dp"
+
+            />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 
     <ListView
