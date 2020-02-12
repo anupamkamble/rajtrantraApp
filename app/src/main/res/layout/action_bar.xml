@@ -34,7 +34,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toEndOf="@+id/backArrow"
             app:layout_constraintBottom_toBottomOf="parent"
-            tools:text="Voter Servey" />
+            tools:text="Voter Survey" />
 
 
         <TextView

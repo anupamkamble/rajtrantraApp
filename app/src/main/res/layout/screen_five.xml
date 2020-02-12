@@ -128,7 +128,7 @@
                                     android:layout_marginStart="@dimen/padding_20"
                                     android:layout_marginEnd="@dimen/padding_10"
                                     android:layout_marginTop="@dimen/padding_20"
-                                    android:layout_alignParentEnd="true"
+                                    android:text="No"
                                     app:layout_constraintStart_toEndOf="@+id/familyHead"
                                     app:layout_constraintTop_toBottomOf="@+id/shareButton"/>
 
@@ -257,6 +257,18 @@
                                     android:layout_marginTop="@dimen/padding_15"
                                     android:background="@drawable/button_background" />
 
+                                <TextView
+                                    android:id="@+id/dobCalendar"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/padding_10"
+                                    android:textSize="18dp"
+                                    android:background="@drawable/ic_calender"
+                                    android:backgroundTint="@color/colorBlack"
+                                    app:layout_constraintBottom_toBottomOf="@id/dobtEdit"
+                                    app:layout_constraintEnd_toEndOf="@id/dobtEdit"
+                                    app:layout_constraintTop_toTopOf="@id/dobtEdit" />
+
                                 <androidx.constraintlayout.widget.ConstraintLayout
                                     android:id="@+id/detailsLayout"
                                     android:layout_width="match_parent"
@@ -278,6 +290,17 @@
                                         android:layout_marginTop="@dimen/padding_15"
                                         android:background="@drawable/button_background" />
 
+                                    <Spinner
+                                        android:id="@+id/casteSpinner"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        app:layout_constraintEnd_toEndOf="@+id/caste"
+                                        app:layout_constraintStart_toStartOf="@+id/caste"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="@+id/caste">
+                                    </Spinner>
+
 
                                     <TextView
                                         android:id="@+id/bloodGroup"
@@ -292,6 +315,17 @@
                                         android:layout_marginTop="@dimen/padding_15"
                                         android:background="@drawable/button_background" />
 
+                                    <Spinner
+                                        android:id="@+id/bloodGroupSpinner"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        app:layout_constraintEnd_toEndOf="@+id/bloodGroup"
+                                        app:layout_constraintStart_toStartOf="@+id/bloodGroup"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="@+id/bloodGroup">
+                                    </Spinner>
+
                                     <TextView
                                         android:id="@+id/education"
                                         android:layout_width="150dp"
@@ -305,6 +339,17 @@
                                         android:layout_marginTop="@dimen/padding_15"
                                         android:background="@drawable/button_background" />
 
+                                    <Spinner
+                                        android:id="@+id/educationSpinner"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        app:layout_constraintEnd_toEndOf="@+id/education"
+                                        app:layout_constraintStart_toStartOf="@+id/education"
+                                        app:layout_constraintTop_toBottomOf="@+id/caste"
+                                        app:layout_constraintBottom_toBottomOf="@+id/education">
+                                    </Spinner>
+
                                     <TextView
                                         android:id="@+id/profession"
                                         android:layout_width="150dp"
@@ -317,6 +362,17 @@
                                         android:padding="@dimen/padding_5"
                                         android:layout_marginTop="@dimen/padding_15"
                                         android:background="@drawable/button_background" />
+
+                                    <Spinner
+                                        android:id="@+id/professionSpinner"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        app:layout_constraintEnd_toEndOf="@+id/profession"
+                                        app:layout_constraintStart_toStartOf="@+id/profession"
+                                        app:layout_constraintTop_toBottomOf="@+id/bloodGroup"
+                                        app:layout_constraintBottom_toBottomOf="@+id/profession">
+                                    </Spinner>
 
 
                                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -398,7 +454,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginEnd="@dimen/padding_10"
                                     android:layout_marginTop="@dimen/padding_20"
-                                    android:layout_alignParentEnd="true"
+                                    android:text="No"
                                     app:layout_constraintStart_toStartOf="@+id/vibhagEdit"
                                     app:layout_constraintTop_toBottomOf="@+id/vibhagEdit"/>
 
