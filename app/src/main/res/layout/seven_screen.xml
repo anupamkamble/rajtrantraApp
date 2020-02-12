@@ -13,7 +13,9 @@
         layout="@layout/header_layout"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        app:layout_constraintTop_toTopOf="parent"></include>
+        app:layout_constraintTop_toTopOf="parent">
+
+    </include>
 
     <EditText
         android:id="@+id/search"
@@ -48,9 +50,74 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/buttonPanel"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="60dp"
+        android:background="@drawable/white_curve"
+        app:layout_constraintBottom_toBottomOf="parent"
 
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
 
+        <TextView
+            android:id="@+id/undoTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Undo"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="@+id/view1"
+            android:textSize="20dp"
+            android:textStyle="bold"
+
+            />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/grayColor"
+            app:layout_constraintEnd_toStartOf="@+id/syncTxt"
+            app:layout_constraintStart_toEndOf="@id/undoTxt"
+            />
+        <TextView
+            android:id="@+id/syncTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/view1"
+            android:text="Sync"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/grayColor"
+            app:layout_constraintEnd_toStartOf="@+id/refreshTxt"
+            app:layout_constraintStart_toEndOf="@id/syncTxt"
+            />
+
+        <TextView
+            android:id="@+id/refreshTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Refresh"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/view2"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
